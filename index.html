@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아동 언어 발달 단계 설문지</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+    body {
+        font-family: 'Nanum Gothic', sans-serif;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fdfdfd;
+    }
+    h1, h2 {
+        text-align: center;
+        color: #333;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #f8a57f;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    #resultPage {
+        display: none;
+    }
+    .results {
+        font-weight: bold;
+        color: #007bff;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .section {
+        border: 3px solid #ccc;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .social-table {
+        background-color: #fad4a6;
+    }
+    .receptive-table {
+        background-color: #fbe7ab;
+    }
+    .expressive-table {
+        background-color: #e6ffe6;
+    }
+</style>
+</head>
+<body>
+
+<div id="surveyPage">
+    <h1>아동 언어 발달 단계 설문지</h1>
+
+    <form id="languageSurvey">
+
+        <!-- 사회성 -->
+        <div class="section">
+            <h2>사회성 (Sociality)</h2>
+            <table class="social-table">
+                <tr>
+                    <th>질문</th>
+                    <th>예</th>
+                    <th>아니오</th>
+                </tr>
+                <!-- 기본 질문 -->
+                <tr>
+                    <td>다른 아이들과 잘 어울릴 수 있나요?</td>
+                    <td><input type="radio" name="social1" value="yes" required></td>
+                    <td><input type="radio" name="social1" value="no"></td>
+                </tr>
+                <tr>
+                    <td>감정 표현을 적절하게 하나요?</td>
+                    <td><input type="radio" name="social2" value="yes" required></td>
+                    <td><input type="radio" name="social2" value="no"></td>
+                </tr>
+                <!-- 추가 질문 20개 -->
+                <tr>
+                    <td>아이들과 협동할 수 있나요?</td>
+                    <td><input type="radio" name="social3" value="yes"></td>
+                    <td><input type="radio" name="social3" value="no"></td>
+                </tr>
+                <!-- (추가로 18개의 질문 항목이 이어짐) -->
+                <!-- 계속해서 이름 변경: name="social4" ... name="social22" -->
+
+            </table>
+        </div>
+
+        <!-- 수용 언어 -->
+        <div class="section">
+            <h2>수용 언어 (Receptive Language)</h2>
+            <table class="receptive-table">
+                <tr>
+                    <th>질문</th>
+                    <th>예</th>
+                    <th>아니오</th>
+                </tr>
+                <!-- 기본 질문 -->
+                <tr>
+                    <td>간단한 지시를 이해할 수 있나요?</td>
+                    <td><input type="radio" name="receptive1" value="yes" required></td>
+                    <td><input type="radio" name="receptive1" value="no"></td>
+                </tr>
+                <tr>
+                    <td>단어의 의미를 잘 파악하나요?</td>
+                    <td><input type="radio" name="receptive2" value="yes" required></td>
+                    <td><input type="radio" name="receptive2" value="no"></td>
+                </tr>
+                <!-- 추가 질문 20개 -->
+                <tr>
+                    <td>긴 문장을 이해할 수 있나요?</td>
+                    <td><input type="radio" name="receptive3" value="yes"></td>
+                    <td><input type="radio" name="receptive3" value="no"></td>
+                </tr>
+                <!-- (추가로 18개의 질문 항목이 이어짐) -->
+                <!-- 계속해서 이름 변경: name="receptive4" ... name="receptive22" -->
+
+            </table>
+        </div>
+
+        <!-- 표현 언어 -->
+        <div class="section">
+            <h2>표현 언어 (Expressive Language)</h2>
+            <table class="expressive-table">
+                <tr>
+                    <th>질문</th>
+                    <th>예</th>
+                    <th>아니오</th>
+                </tr>
+                <!-- 기본 질문 -->
+                <tr>
+                    <td>자신의 감정을 말로 표현할 수 있나요?</td>
+                    <td><input type="radio" name="expressive1" value="yes" required></td>
+                    <td><input type="radio" name="expressive1" value="no"></td>
+                </tr>
+                <tr>
+                    <td>단어를 사용하여 의사소통을 하나요?</td>
+                    <td><input type="radio" name="expressive2" value="yes" required></td>
+                    <td><input type="radio" name="expressive2" value="no"></td>
+                </tr>
+                <!-- 추가 질문 20개 -->
+                <tr>
+                    <td>복잡한 문장을 말할 수 있나요?</td>
+                    <td><input type="radio" name="expressive3" value="yes"></td>
+                    <td><input type="radio" name="expressive3" value="no"></td>
+                </tr>
+                <!-- (추가로 18개의 질문 항목이 이어짐) -->
+                <!-- 계속해서 이름 변경: name="expressive4" ... name="expressive22" -->
+
+            </table>
+        </div>
+
+        <div class="button-container">
+            <button type="button" onclick="calculateResults()">결과 확인</button>
+        </div>
+    </form>
+</div>
+
+<div id="resultPage">
+    <h1>언어 발달 단계 결과</h1>
+    <div class="results" id="resultOutput"></div>
+    <div class="button-container">
+        <button type="button" onclick="goBack()">다시 설문하기</button>
+    </div>
+</div>
+
+<script>
+function calculateResults() {
+    const surveyForm = document.getElementById("languageSurvey");
+    if (!surveyForm.checkValidity()) {
+        alert("모든 항목을 선택해 주세요.");
+        return;
+    }
+
+    let socialYes = 0, receptiveYes = 0, expressiveYes = 0;
+
+    document.querySelectorAll('input[name^="social"]:checked').forEach(input => {
+        if (input.value === 'yes') socialYes++;
+    });
+
+    document.querySelectorAll('input[name^="receptive"]:checked').forEach(input => {
+        if (input.value === 'yes') receptiveYes++;
+    });
+
+    document.querySelectorAll('input[name^="expressive"]:checked').forEach(input => {
+        if (input.value === 'yes') expressiveYes++;
+    });
+
+    function getStage(yesCount) {
+        if (yesCount >= 20) return "매우 고급 발달";
+        else if (yesCount >= 16) return "고급 발달";
+        else if (yesCount >= 12) return "중상 발달";
+        else if (yesCount >= 8) return "중간 발달";
+        else if (yesCount >= 4) return "초기 발달";
+        else return "추가 관찰 필요";
+    }
+
+    let socialStage = getStage(socialYes);
+    let receptiveStage = getStage(receptiveYes);
+    let expressiveStage = getStage(expressiveYes);
+
+    document.getElementById("resultOutput").innerHTML = `
+        <p><strong>사회성 언어:</strong> ${socialStage}</p>
+        <p><strong>수용 언어:</strong> ${receptiveStage}</p>
+        <p><strong>표현 언어:</strong> ${expressiveStage}</p>
+    `;
+
+    document.getElementById("surveyPage").style.display = "none";
+    document.getElementById("resultPage").style.display = "block";
+}
+
+function goBack() {
+    document.getElementById("languageSurvey").reset();
+    document.getElementById("surveyPage").style.display = "block";
+    document.getElementById("resultPage").style.display = "none";
+}
+</script>
+
+</body>
+</html>
